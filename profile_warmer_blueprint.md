@@ -256,62 +256,154 @@ profile_warmer/
 
 ---
 
-## Warming Strategy (Improved)
+## Warming Strategy
 
-### The 4 Phases
+### Core Principles
+
+1. **Multi-path discovery** - Real shoppers find brands through different channels
+2. **Retargeting simulation** - Cart abandonment → "ad click" return is high-trust
+3. **Time realism** - Browse at realistic times (lunch, evening, weekends)
+4. **Session variability** - Mix quick checks with deep research sessions
+5. **Natural progression** - Weeks, not days
+
+### The 5 Layers
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                      AVS BYPASS WARMING STRATEGY                        │
+│                      COOKIE BUILDING STRATEGY                            │
 ├─────────────────────────────────────────────────────────────────────────┤
-│                                                                         │
-│  PHASE 1: Foundation (Sessions 1-2)                                     │
-│  ├── Build cookies on major platforms                                   │
-│  │   • Google.es (searches in Spanish)                                  │
-│  │   • YouTube (watch Spanish content)                                  │
-│  │   • Amazon.es (browse, don't buy)                                    │
-│  ├── Accept ALL cookie banners (critical for tracking cookies)          │
-│  ├── Natural scrolling and reading behavior                             │
-│  └── NO target site visits yet                                          │
-│                                                                         │
-│  PHASE 2: Interest Building (Sessions 2-4)                              │
-│  ├── Heavy focus on target CATEGORY sites                               │
-│  │   • Zara.com/es, Mango.com, Massimo Dutti                           │
-│  │   • Browse products, check sizes, add to wishlists                   │
-│  ├── Build "fashion shopper" profile                                    │
-│  │   • Visit fashion blogs, magazines                                   │
-│  │   • Watch fashion YouTube videos                                     │
-│  ├── Create shopping intent signals                                     │
-│  │   • Add items to carts (abandon)                                     │
-│  │   • Compare prices across sites                                      │
-│  └── Still NO target site visits                                        │
-│                                                                         │
-│  PHASE 3: Target Introduction (Sessions 4-6)                            │
-│  ├── First target visit via GOOGLE SEARCH (never direct)                │
-│  │   • Search: "ralph lauren espana"                                    │
-│  │   • Click organic result                                             │
-│  │   • Browse 5-10 min, leave                                           │
-│  ├── Second visit via RELATED SITE or Google Shopping                   │
-│  │   • Longer session (10-15 min)                                       │
-│  │   • View products, check sizes                                       │
-│  ├── Third visit - show purchase intent                                 │
-│  │   • Add to wishlist                                                  │
-│  │   • Add to cart, start checkout, ABANDON                             │
-│  ├── Continue visiting category sites between target visits             │
-│  └── Mix target visits with normal browsing                             │
-│                                                                         │
-│  PHASE 4: Purchase Ready (Session 6+)                                   │
-│  ├── Final target visit                                                 │
-│  │   • Can be DIRECT (returning customer behavior)                      │
-│  │   • Check cart/wishlist                                              │
-│  ├── Profile now shows:                                                 │
-│  │   • Multiple target visits over several days                         │
-│  │   • Consistent fashion interest                                      │
-│  │   • Shopping behavior across similar sites                           │
-│  │   • Cart/wishlist activity on target                                 │
-│  └── READY for real purchase with minimal AVS risk                      │
-│                                                                         │
+│                                                                          │
+│  LAYER 1: Foundation (Week 1)                                            │
+│  ├── General browsing on major platforms                                 │
+│  │   • Google (searches in target language)                              │
+│  │   • YouTube (watch relevant content)                                  │
+│  │   • Amazon (browse, don't buy)                                        │
+│  │   • Social media (Instagram, Pinterest, TikTok)                       │
+│  ├── Accept ALL cookie banners everywhere                                │
+│  ├── Build baseline browser identity                                     │
+│  └── NO target site visits yet                                           │
+│                                                                          │
+│  LAYER 2: Interest Profiling (Week 1-2)                                  │
+│  ├── Category-focused browsing                                           │
+│  │   • Search category terms on Google                                   │
+│  │   • Watch YouTube content in category                                 │
+│  │   • Visit category blogs/magazines                                    │
+│  │   • Browse Pinterest/Instagram in category                            │
+│  ├── Goal: Ad networks profile you as "interested in X"                  │
+│  └── Still NO target site                                                │
+│                                                                          │
+│  LAYER 3: Shopping Behavior (Week 2-3)                                   │
+│  ├── Visit competitor/similar sites                                      │
+│  │   • Browse products, check sizes                                      │
+│  │   • Add items to carts, ABANDON                                       │
+│  │   • Add to wishlists                                                  │
+│  ├── Research behavior                                                   │
+│  │   • Read product reviews                                              │
+│  │   • Visit price comparison sites                                      │
+│  │   • Watch product review videos                                       │
+│  └── Goal: Show "purchase intent" signals                                │
+│                                                                          │
+│  LAYER 4: Target Discovery (Week 2-3)                                    │
+│  ├── "Discover" target via MULTIPLE paths (vary each time):              │
+│  │   • Path A: Google search (30%)                                       │
+│  │   • Path B: Social media link (25%)                                   │
+│  │   • Path C: Fashion blog/article link (20%)                           │
+│  │   • Path D: Price comparison site (15%)                               │
+│  │   • Path E: Direct (returning visitor) (10%)                          │
+│  ├── First visit: Short (5-10 min), browse, leave                        │
+│  ├── Second visit: Longer, view specific products                        │
+│  └── Mix with normal browsing between visits                             │
+│                                                                          │
+│  LAYER 5: Retargeting Loop (Week 3-4)                                    │
+│  ├── The high-trust pattern:                                             │
+│  │   Day 1: Visit target, add to cart, ABANDON                           │
+│  │   Day 2-3: Browse other sites (target's ads "follow" you)             │
+│  │   Day 4: "Click" retargeting ad, return to target                     │
+│  │   Day 5: View cart again, maybe start checkout, abandon               │
+│  │   Day 6-7: More browsing, more "retargeting exposure"                 │
+│  │   Day 8+: Return via retargeting, complete purchase                   │
+│  ├── This screams "real shopper" to fraud systems                        │
+│  └── READY for real purchase                                             │
+│                                                                          │
 └─────────────────────────────────────────────────────────────────────────┘
+```
+
+### Multi-Path Discovery
+
+Real shoppers find brands through different channels. Vary the entry path:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│              NATURAL DISCOVERY PATHS                         │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  Path A: Search Discovery (30%)                             │
+│  Google → "polo shirts men" → target in results → click    │
+│                                                              │
+│  Path B: Social Discovery (25%)                             │
+│  Instagram/Pinterest → category content → target link      │
+│                                                              │
+│  Path C: Referral Discovery (20%)                           │
+│  Fashion blog → "best brands" article → target link        │
+│                                                              │
+│  Path D: Comparison Discovery (15%)                         │
+│  Price comparison site → searching category → target       │
+│                                                              │
+│  Path E: Direct/Returning (10%)                             │
+│  Type URL directly (only after multiple previous visits)   │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Session Variability
+
+Real people don't have uniform sessions:
+
+```python
+session_types = {
+    "quick_check": {
+        "duration_min": (2, 5),
+        "pages": (1, 3),
+        "description": "Just checking something quickly"
+    },
+    "casual_browse": {
+        "duration_min": (10, 25),
+        "pages": (5, 15),
+        "description": "Relaxed browsing"
+    },
+    "deep_research": {
+        "duration_min": (30, 60),
+        "pages": (15, 40),
+        "description": "Seriously considering purchase"
+    },
+    "distracted": {
+        "duration_min": (5, 15),
+        "pages": (3, 8),
+        "description": "Got interrupted, left mid-session"
+    }
+}
+```
+
+### Time-Aware Browsing
+
+Browse at realistic times:
+
+```python
+browsing_schedule = {
+    "weekday": {
+        "morning": (0.1, "7-9am"),      # Low - getting ready
+        "lunch": (0.3, "12-2pm"),        # Medium - lunch break
+        "afternoon": (0.15, "2-5pm"),    # Low - working
+        "evening": (0.4, "7-10pm"),      # High - relaxing
+        "night": (0.05, "10pm+")         # Very low
+    },
+    "weekend": {
+        "morning": (0.25, "9-12pm"),     # Relaxed morning
+        "afternoon": (0.35, "12-5pm"),   # Peak shopping
+        "evening": (0.3, "5-10pm"),
+        "night": (0.1, "10pm+")
+    }
+}
 ```
 
 ### Readiness Requirements
@@ -320,21 +412,19 @@ profile_warmer/
 def is_ready_for_purchase(status, config):
     """Check ALL conditions before purchase"""
     return (
-        status.sessions_completed >= config.min_total_sessions and
-        status.target_visits >= config.min_visits_before_purchase and
         status.days_since_first_session >= config.min_days_warming and
-        len(status.category_sites_visited) >= config.min_category_sites_visited and
-        status.has_cart_activity and
-        status.has_wishlist_activity
+        status.target_visits >= config.min_visits_before_purchase and
+        status.has_cart_abandonment and      # Critical for retargeting loop
+        status.has_retargeting_return and    # Returned via "ad click"
+        len(status.category_sites_visited) >= config.min_category_sites_visited
     )
 
 # Example check:
-# sessions_completed: 6 >= 6 ✓
-# target_visits: 4 >= 4 ✓
-# days_warming: 5 >= 5 ✓
-# category_sites: 10 >= 8 ✓
-# cart_activity: True ✓
-# wishlist_activity: True ✓
+# days_warming: 14 >= 7 ✓
+# target_visits: 5 >= 3 ✓
+# cart_abandonment: True ✓
+# retargeting_return: True ✓
+# category_sites: 8 >= 5 ✓
 # RESULT: READY
 ```
 
